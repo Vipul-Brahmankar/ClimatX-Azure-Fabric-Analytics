@@ -1,1 +1,11 @@
+# Core Data Engineering
+pyspark==3.5.0
+delta-spark==3.0.0
+pandas>=2.0.0
 
+# API Extraction
+requests>=2.31.0
+
+# Optional: For local development/testing
+python-dotenv>=1.0.0
+notebook>=7.0.0
