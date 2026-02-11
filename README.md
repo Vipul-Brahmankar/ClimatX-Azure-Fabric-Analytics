@@ -80,7 +80,7 @@ ClimatX-Azure-Fabric-Analytics/
 ### Running the Pipeline
 1.  **Clone the Repo:**
     ```bash
-    git clone [https://github.com/yourusername/ClimatX-Azure-Fabric-Analytics.git](https://github.com/yourusername/ClimatX-Azure-Fabric-Analytics.git)
+    git clone [https://github.com/Vipul-Brahmankar/ClimatX-Azure-Fabric-Analytics.git](https://github.com/Vipul-Brahmankar/ClimatX-Azure-Fabric-Analytics.git)
     ```
 2.  **Import Notebooks:** Upload the files from `notebooks/` into your Fabric Workspace.
 3.  **Run Ingestion:** Execute `01_ingestion/extract_weather_api.ipynb` to populate the Bronze layer.
