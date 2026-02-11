@@ -82,10 +82,10 @@ ClimatX-Azure-Fabric-Analytics/
     ```bash
     git clone [https://github.com/yourusername/ClimatX-Azure-Fabric-Analytics.git](https://github.com/yourusername/ClimatX-Azure-Fabric-Analytics.git)
     ```
-2.  **Import Notebooks:** Upload the files from `src/` or `notebooks/` into your Fabric Workspace.
-3.  **Run Ingestion:** Execute `01_ingestion/extract_weather_api.py` to populate the Bronze layer.
-4.  **Run Transformation:** Execute `02_transformation/clean_silver_weather.py` to clean data.
-5.  **Run Analytics:** Execute `03_analytics/aggregate_gold_weather.py` to generate report-ready tables.
+2.  **Import Notebooks:** Upload the files from `notebooks/` into your Fabric Workspace.
+3.  **Run Ingestion:** Execute `01_ingestion/extract_weather_api.ipynb` to populate the Bronze layer.
+4.  **Run Transformation:** Execute `02_transformation/clean_silver_weather.ipynb` to clean data.
+5.  **Run Analytics:** Execute `03_analytics/aggregate_gold_weather.ipynb` to generate report-ready tables.
 
 ---
 
