@@ -15,9 +15,9 @@ The pipeline ingests raw historical weather data from public APIs, processes it 
 
 ## 🏗️ Architecture & Data Flow
 
-[Insert Architecture Diagram Here]
 
-1.  **Ingestion (Bronze Layer):** * Automated extraction of historical weather data (London, NY, Tokyo) via the Open-Meteo API.
+1.  **Ingestion (Bronze Layer):**
+    * Automated extraction of historical weather data (London, NY, Tokyo) via the Open-Meteo API.
     * Raw JSON data is landed directly into **OneLake** as Delta Parquet files.
 2.  **Transformation (Silver Layer):**
     * **PySpark** notebooks perform data cleaning, schema enforcement, and deduplication.
@@ -33,20 +33,61 @@ The pipeline ingests raw historical weather data from public APIs, processes it 
 
 ## 📂 Repository Structure
 
-
+```text
 ClimatX-Azure-Fabric-Analytics/
 │
-├── src/
+├── notebooks/              #Fabric Notebook exports (.ipynb)
 │   ├── 01_ingestion/       # Extract logic: API -> Bronze Lakehouse
-│   │   └── extract_weather_api.py
+│   │   └── extract_weather_api.ipynb
 │   │
 │   ├── 02_transformation/  # Silver logic: Cleaning & Deduplication
-│   │   └── clean_silver_weather.py
+│   │   └── clean_silver_weather.ipynb
 │   │
 │   └── 03_analytics/       # Gold logic: Aggregations & Rolling Averages
-│       └── aggregate_gold_weather.py
+│       └── aggregate_gold_weather.ipynb
 │
-├── notebooks/              # Jupyter/Fabric Notebook exports (.ipynb)
 ├── docs/                   # Architecture diagrams and screenshots
 ├── requirements.txt        # Python dependencies (requests, pandas, pyspark)
 └── README.md               # Project documentation
+```
+
+---
+
+## 🚀 Key Features
+* **Scalable ELT Pipeline:** Designed workflows capable of handling multi-region weather data with automated error handling.
+* **Delta Lake Optimization:** utilized `OPTIMIZE` and `Z-ORDER` indexing (implied in Silver layer partitioning) for fast query performance.
+* **Advanced Analytics:** Implemented window functions in Spark to calculate sliding window metrics for trend analysis.
+* **Full-Stack Data Engineering:** From API calls (Python) to Distributed Compute (Spark) to BI Modeling (DAX).
+
+---
+
+## 📊 Dashboard Preview
+![Dashboard Placeholder](https://via.placeholder.com/800x400?text=Insert+Power+BI+Screenshot+Here)
+
+**Key Metrics Tracked:**
+* Average Monthly Temperature vs. 5-Year Baseline
+* Frequency of Extreme Weather Events (Freezing/Heatwave)
+* Precipitation Trends by City
+
+---
+
+## 🛠️ Setup & Usage
+
+### Prerequisites
+* Microsoft Fabric Workspace (or Azure Databricks Workspace + ADLS Gen2)
+* Python 3.10+
+
+### Running the Pipeline
+1.  **Clone the Repo:**
+    ```bash
+    git clone [https://github.com/yourusername/ClimatX-Azure-Fabric-Analytics.git](https://github.com/yourusername/ClimatX-Azure-Fabric-Analytics.git)
+    ```
+2.  **Import Notebooks:** Upload the files from `src/` or `notebooks/` into your Fabric Workspace.
+3.  **Run Ingestion:** Execute `01_ingestion/extract_weather_api.py` to populate the Bronze layer.
+4.  **Run Transformation:** Execute `02_transformation/clean_silver_weather.py` to clean data.
+5.  **Run Analytics:** Execute `03_analytics/aggregate_gold_weather.py` to generate report-ready tables.
+
+---
+
+## 📬 Contact
+**[Vipul Brahmankar]** [vipul.brahmankar@gmail.com]  
