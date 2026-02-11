@@ -11,10 +11,9 @@
 
 The pipeline ingests raw historical weather data from public APIs, processes it through a **Medallion Architecture** (Bronze $\rightarrow$ Silver $\rightarrow$ Gold), and delivers interactive insights on climate trends, extreme weather events, and temperature volatility.
 
----
 
 ## 🏗️ Architecture & Data Flow
-
+![Arch Placeholder](https://github.com/Vipul-Brahmankar/ClimatX-Azure-Fabric-Analytics/blob/801661282866af24ac9a6e40b9dc718b5a9a92f7/docs/ClimatX-architecture.png)
 
 1.  **Ingestion (Bronze Layer):**
     * Automated extraction of historical weather data (London, NY, Tokyo) via the Open-Meteo API.
@@ -62,7 +61,8 @@ ClimatX-Azure-Fabric-Analytics/
 ---
 
 ## 📊 Dashboard Preview
-![Dashboard Placeholder](https://via.placeholder.com/800x400?text=Insert+Power+BI+Screenshot+Here)
+![Dashboard Placeholder](https://github.com/Vipul-Brahmankar/ClimatX-Azure-Fabric-Analytics/blob/4cd1ff06f2c8bc0554106333289875d6529e8dc0/docs/ClimatX-dashboard.png)
+
 
 **Key Metrics Tracked:**
 * Average Monthly Temperature vs. 5-Year Baseline
